@@ -2,13 +2,13 @@
  * Project name	:
  * File name	:
  * Created date	:
- * Author	:
+ * Author	: Hung-Ho Huy
  * Last modified:
  * Desc		:
  */
 
 /*
- * brief	: 
+ * brief	:
  * detail	:
  * param	:
  * return	:
