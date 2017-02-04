@@ -1,3 +1,6 @@
 - Auto push to github without username and password:
 	git remote set-url origin git@github.com:heroh396/Linux.git
 
+- Website Vietnamese instruction:
+	https://thachpham.com/series/git-co-ban
+
