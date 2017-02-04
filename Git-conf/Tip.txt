@@ -1,0 +1,3 @@
+- Auto push to github without username adn password:
+	git remote set-url origin git@github.com:username/repo.git
+
