@@ -2,7 +2,7 @@
  * Project name	:
  * File name	:
  * Created date	:
- * Author	: Hung-Ho Huy
+ * Author	:
  * Last modified:
  * Desc		:
  */
