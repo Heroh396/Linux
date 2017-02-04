@@ -1,4 +1,4 @@
-# Linux-cofiguration
+# Linux
 
 
 Hello world!
