@@ -1,0 +1,14 @@
+#~/.alias
+alias update='sudo apt-get update;'
+alias search='apt-cache search '
+alias install='sudo apt-get install '
+
+alias Study='cd /media/h3/Study;'
+alias Play='cd /media/h3/Play;'
+alias Lab='cd /media/h3/Study/Lab;'
+alias open='nautilus .'
+alias matlab='cd ~/MATLAB/R2016b/bin/; sudo ./matlab;'
+alias modelSim='cd ~/intelFPGA/16.1/modelsim_ase/linuxaloem/; sudo ./vsim;'
+alias xxx='shutdown -now'
+alias c='clear'
+alias cb='xclip -selection clipboard '
