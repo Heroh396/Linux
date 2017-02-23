@@ -21,9 +21,15 @@
 
 - Change ESC: Shift + {
 
-- Delete char: x
+- Delete char: x, dd, dw, d0, d$
+- Delete: d10j, d10k, d10w, d10h
+
+- Find: /text then n to next
+- Replace: %s/old/new/gc
 
 - Mode: :q, :q!, :w, :w!, :wq
+
+- Line numer: :set nu, :set nonu
 
 
 Continues...
