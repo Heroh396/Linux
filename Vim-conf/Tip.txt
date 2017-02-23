@@ -9,3 +9,21 @@
 
 - Using command in vim:
         + :!<command>
+
+- Top, down: gg, G
+
+- Copy line:
+	+ y <number> y
+	+ Paste: p (head line), P (tail line)
+
+- Delete:
+	+ dd (all line), D (from pointer to end line)
+
+- Change ESC: Shift + {
+
+- Delete char: x
+
+- Mode: :q, :q!, :w, :w!, :wq
+
+
+Continues...
