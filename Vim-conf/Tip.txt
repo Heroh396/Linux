@@ -1,0 +1,11 @@
+- Copy text in vim:
+        + Command:      :set paste
+        + i
+        + Paste:        Ctrl + Shift + V
+
+- Copy text in other file:
+        + Comand mode
+        + :r file_path
+
+- Using command in vim:
+        + :!<command>
