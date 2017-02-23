@@ -1,0 +1,7 @@
+- Move:
+	+ Ctrl + A	: head
+	+ Ctrl + E	: tail
+
+- Show dir:
+	+ ls | grep folder_name
+	+ history | grep folder_name
