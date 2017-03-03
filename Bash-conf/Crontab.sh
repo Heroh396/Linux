@@ -1,13 +1,13 @@
 ################################################################################
 # Project name   :
 # File name      : Crontab.sh
-# Created date   : Sat 25 Feb 2017
+# Created date   : Fri 03 Mar 2017
 # Author         : Huy Hung Ho
-# Last modified  : Sat 25 Feb 2017
+# Last modified  : Fri 03 Mar 2017
 # Guide          :
 ###############################################################################
 #!/bin/bash
-
-sleep 1 && xset dpms force off &&  gnome-screensaver-command -a
-
-
+export DISPLAY=:0.0
+sleep 1 && xset dpms force suspend && xdotool key Ctrl+alt+l
+#notify-send "DKM"
+#gnome-screensaver-command -a
