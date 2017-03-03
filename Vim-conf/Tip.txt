@@ -1,3 +1,6 @@
+- Update time:
+	+ :UpdateDF
+
 - Copy text in vim:
         + Command:      :set paste
         + i
