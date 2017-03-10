@@ -1,13 +1,18 @@
 ################################################################################
 # Project name   :
-# File name      :
-# Created date   : !!DATE
+# File name      : test.sh
+# Created date   : Fri 10 Mar 2017
 # Author         : Huy Hung Ho
-# Last modified  : !!DATE
+# Last modified  : Fri 10 Mar 2017
 # Guide          :
 ###############################################################################
 #!/bin/bash
-export DISPLAY=:0.0
-sleep 1 && xset dpms force suspend && xdotool key Ctrl+alt+l
-#notify-send "DKM"
-#gnome-screensaver-command -a
+
+name=h3
+
+if [[ $name = $USER ]]
+then
+	echo "This is my laptop."
+else
+	echo "Whose is this laptop?"
+fi

@@ -8,6 +8,6 @@
 ###############################################################################
 #!/bin/bash
 export DISPLAY=:0.0
-sleep 1 && xset dpms force suspend && xdotool key Ctrl+alt+l
+xdotool key Ctrl+alt+l
 #notify-send "DKM"
 #gnome-screensaver-command -a
