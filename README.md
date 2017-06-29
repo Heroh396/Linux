@@ -14,14 +14,11 @@ This repository stores the cofigurations when working.
 
 Features
 ========
-# ubuntu_conf
-
-# bash_conf
-
-# vim_conf
-
-# git_conf
-
-# modelsim_conf
+# Directory
+* ubuntu_conf
+* bash_conf
+* vim_conf
+* git_conf
+* modelsim_conf
 
 
