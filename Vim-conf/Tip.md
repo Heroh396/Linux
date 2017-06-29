@@ -4,7 +4,7 @@
 // File name      : Tip.md
 // Created date   : Fri 10 Mar 2017
 // Author         : Huy Hung Ho
-// Last modified  : Fri 10 Mar 2017
+// Last modified  : Sat 11 Mar 2017
 // Desc           :
 *******************************************************************************/
 -->
@@ -79,4 +79,13 @@ Continues...
 	+ Search:		/keyword	and 	+n (next)
 	+ Sub (replate):	:%s/old/new/g	or	../gc
 
-	
+- Go to n line:
+	nG
+- Go to header:
+	H
+- Copy current line:
+	yy
+- Paste:
+	p, P
+- Auto text completion (in Insert mode):
+	<Ctrl> + P

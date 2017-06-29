@@ -1,0 +1,12 @@
+Tai sao lam DCT
+Nhan dinh rieng cua minh: low power
+Survey dc cong viec cua nguoi khac
+Muc tieu
+So sanh
+
+Capture em tu viet ak, thu cong v~
+
+Verification model
+
+Test cung input, cung ouput. test 1 so vector dac biet
+test tung bo 1, sau do moi test voi system
