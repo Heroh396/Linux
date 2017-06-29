@@ -171,3 +171,7 @@ TIP
 
 - Remove file out the stage
     + git rm --cached <file>
+
+- Pull a file from host server
+    + git fetch
+    + git checkout origin/master -- <file>

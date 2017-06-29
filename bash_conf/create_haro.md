@@ -1,10 +1,10 @@
 <!---
 /*******************************************************************************
 // Project name   :
-// File name      : Note.md
+// File name      : create_haro.md
 // Created date   : Fri 10 Mar 2017
 // Author         : Huy Hung Ho
-// Last modified  : Fri 10 Mar 2017
+// Last modified  : Thursday 06/29/17
 // Desc           :
 *******************************************************************************/
 -->

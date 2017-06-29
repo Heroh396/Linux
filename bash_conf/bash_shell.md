@@ -134,3 +134,23 @@ Directory:
 
 - Cat line number n:
 	sed -n <numberLine>p filename
+
+- Move:
+	+ Ctrl + A	: head
+	+ Ctrl + E	: tail
+
+- Show dir:
+	+ ls | grep folder_name
+	+ history | grep folder_name
+
+- Delete screen:	<Ctrl> + L
+- Exit session:		<Ctrl> + D
+- Find previous command:	<Ctrl> + R
+
+- Font: https://github.com/powerline/powerline
+
+- Convert JPG to PNG:
+	mogrify -format png /path/to/*.jpg
+
+- Resize scale image:
+	mogrify -resize 50% *.png	or 320x240, x240
