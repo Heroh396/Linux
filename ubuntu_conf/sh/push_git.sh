@@ -1,12 +1,13 @@
 ################################################################################
 # Project name   :
-# File name      : Install_DSS.sh
-# Created date   : Tue 14 Mar 2017
+# File name      : Push_git.sh
+# Created date   : Sat 11 Mar 2017
 # Author         : Huy Hung Ho
-# Last modified  : Tue 14 Mar 2017
+# Last modified  : Thu 27 Jul 2017 10:14:34 PM ICT
 # Guide          :
 ###############################################################################
 #!/bin/bash
 
-echo "nameserver 4.2.2.3" >> /etc/resolv.conf
-echo "nameserver 4.2.2.4" >> /etc/resolv.conf
+git add $1
+git commit -m "Edit $(basename $1)"
+git push

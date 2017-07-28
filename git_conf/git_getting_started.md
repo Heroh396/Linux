@@ -157,6 +157,17 @@ Features
 - Push branch to host server
     + git push origin testing
 
+- Undo file
+    + Edit but not add
+        - git clear -df
+        - git checkout -- .
+    + Add but not commit
+        - git reset HEAD
+        - git clean -df
+    + Commit but not push
+        - git reset HEAD~1 --hard
+    + Push done
+        - git revert HEAD~1..HEAD
 
 
 
@@ -175,3 +186,7 @@ TIP
 - Pull a file from host server
     + git fetch
     + git checkout origin/master -- <file>
+
+- Check add file
+    + git add . --patch
+    + git add -p

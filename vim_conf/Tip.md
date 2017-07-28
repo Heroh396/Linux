@@ -12,18 +12,15 @@ Introduction
 ============
 Tip and Trick in VIM
 
-Features
-========
-
-Requirements
-============
-
-
-Installation
-============
-
 Tips
 ====
+- Increment, decreament number
+		+ Ctrl + a, Ctrl + x
+
+- Mode saves file and exit fast
+		+ Shift + Z + Z
+
+
 - Update time:
         + :UpdateDF
 
