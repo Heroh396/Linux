@@ -1,0 +1,23 @@
+--------------------------------------------------------------------------------
+-- Project name   : Human detection by HOG
+-- File name      :
+-- Created date   : !!DATE
+-- Author         : Huy Hung Ho
+-- Last modified  : !!DATE
+-- Desc           :
+--------------------------------------------------------------------------------
+
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+
+Entity X is
+	Port (
+
+	);
+End X;
+
+Architecture Behavioral of X is
+
+Begin
+
+End Behavioral;

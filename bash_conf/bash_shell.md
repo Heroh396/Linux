@@ -154,3 +154,7 @@ Directory:
 
 - Resize scale image:
 	mogrify -resize 50% *.png	or 320x240, x240
+	convert neg_old/*.png -resize 64x128! -quality 100 neg/*.png
+
+- Counte character in a file:
+	grep -o '<character>' file | wc -l
