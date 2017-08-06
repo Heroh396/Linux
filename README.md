@@ -12,6 +12,7 @@ Introduction
 ============
 This repository stores the cofigurations when working.
 
+<<<<<<< HEAD
 
 Features
 ========
@@ -24,5 +25,18 @@ Features
 * git
 
 * modelsim
+=======
+Features
+========
+* ubuntu_conf
+
+* bash_conf
+
+* vim_conf
+
+* git_conf
+
+* modelsim_conf
+>>>>>>> e784bd10ab9db14d705d9918279b39e60ced8017
 
 

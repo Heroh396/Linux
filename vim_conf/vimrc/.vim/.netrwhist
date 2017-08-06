@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/h3/Git/Linux-cofiguration/Git-conf'
+let g:netrw_dirhist_2='/home/h3/Git/heroh396.github.io'
+let g:netrw_dirhist_3='/home/h3/Git/Linux/Git-conf'
+let g:netrw_dirhist_4='/home/Study/Git/Linux/Configs'
+let g:netrw_dirhist_5='/home/Study/Git/Linux/Configs/note'
+let g:netrw_dirhist_6='/home/Study/Git/Linux/Configs'
+let g:netrw_dirhist_7='/home/Study/Git/Linux/Configs/startup'
+let g:netrw_dirhist_8='/home/Study/Git/Linux/Bash-conf'
+let g:netrw_dirhist_9='/etc/rc0.d'
