@@ -12,16 +12,17 @@ Introduction
 ============
 This repository stores the cofigurations when working.
 
+
 Features
 ========
-* ubuntu_conf
+* ubuntu
 
-* bash_conf
+* bash
 
-* vim_conf
+* vim
 
-* git_conf
+* git
 
-* modelsim_conf
+* modelsim
 
 
