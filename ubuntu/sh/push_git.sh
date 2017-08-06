@@ -10,4 +10,5 @@
 
 git add $1
 git commit -m "Edit $(basename $1)"
-git push
+git push origin master
+
