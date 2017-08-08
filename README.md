@@ -14,6 +14,8 @@ This repository stores the cofigurations when working.
 
 Features
 ========
+The configuration of:
+
 * ubuntu
 
 * bash
@@ -23,17 +25,4 @@ Features
 * git
 
 * modelsim
-
-Features
-========
-* ubuntu_conf
-
-* bash_conf
-
-* vim_conf
-
-* git_conf
-
-* modelsim_conf
-
 
