@@ -1,0 +1,19 @@
+# -----------------------------------------------------------------------------
+# Project name   :
+# File name      : gitAdd
+# Created date   : Sat 21 Oct 2017 10:55:49 PM ICT
+# Author         : Huy-Hung Ho
+# Last modified  : Sun 22 Oct 2017 10:27:35 PM ICT
+# Guide          :
+# -----------------------------------------------------------------------------
+
+#!/bin/bash
+
+echo "Enter commit message: ";
+read comment
+git add .
+echo "All files added"
+git commit -m $comment
+echo "Commit done"
+git push
+echo "Pushed"

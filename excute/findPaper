@@ -1,0 +1,12 @@
+# -----------------------------------------------------------------------------
+# Project name   :
+# File name      : findPaper
+# Created date   : Sat 21 Oct 2017 10:55:49 PM ICT
+# Author         : Huy-Hung Ho
+# Last modified  : Sat 21 Oct 2017 10:55:49 PM ICT
+# Guide          :
+# -----------------------------------------------------------------------------
+#!/bin/bash
+
+CLIPBOARD="$(xclip -selection c -o)"
+find /home/Working/Project/ann/doc/paper/ -name "*$CLIPBOARD*"
