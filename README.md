@@ -26,3 +26,4 @@ The configuration of:
 
 * modelsim
 
+* make

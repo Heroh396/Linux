@@ -13,5 +13,5 @@ using namespace std;
 
 
 void print_hello() {
-       cout << "Hello World!";
+    cout << "Hello World!\n";
 }

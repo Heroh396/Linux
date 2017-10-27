@@ -1,0 +1,2 @@
+hello.o: hello.cpp functions.h
+hello.deps: hello.cpp functions.h

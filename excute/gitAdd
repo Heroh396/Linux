@@ -9,11 +9,11 @@
 
 #!/bin/bash
 
-echo "Enter commit message: ";
+echo -n "Enter commit message: "
 read comment
 git add .
 echo "All files added"
 git commit -m $comment
 echo "Commit done"
-git push
+git push origin master
 echo "Pushed"

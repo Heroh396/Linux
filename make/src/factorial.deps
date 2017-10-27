@@ -1,0 +1,2 @@
+factorial.o: factorial.cpp functions.h
+factorial.deps: factorial.cpp functions.h
