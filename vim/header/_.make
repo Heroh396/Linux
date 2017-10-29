@@ -1,46 +1,62 @@
-################################################################################
+##############################################################################
 # Project name   :
 # File name      : !!FILE
-# Created date   : !!DATE
-# Author         : Huy-Hung Ho
 # Last modified  : !!DATE
 # Guide          :
 ###############################################################################
+.PHONY: all run clean cleanall tags syntatic
 
-CC := gcc
-FLAGS += -g
-INC += -I ./inc -I ../
-LD_LIB +=
-#VPATH := inc src
-vpath %.h inc
-vpath %.c src
-vpath %.o obj
-SRC_FILE := $(notdir $(wildcard src/*.c))
-OBJ_FILE := $(addprefix obj/,$(notdir $(SRC_FILE:.c=.o)))
-TEST_FILE := $(notdir $(wildcard test/*c))
-H_FILE := $(notdir $(wildcard inc/*.h))
+LANG	:= cpp
+CC		:= gcc
+CXX 	:= g++
+OPENCV  := `pkg-config --cflags opencv --libs`
+CFLAGS  += -Wall -g -std=c++11 $(OPENCV)
+LIBS	:= $(OPENCV)
+INC     := -I./inc
+LFLAGS 	+= -s -lm
+TARGET 	:= hog
+CLEAR_SCREEN := clear
+
+vpath %.cpp src
+vpath %.h   inc
+
+SUB_DIR := .obj
+CREATE_SUB_DIR := $(shell mkdir -p $(SUB_DIR))
+vpath %.o $(SUB_DIR)
+vpath %.d $(SUB_DIR)
+
+SRCS := $(wildcard src/*.$(LANG))
+INCS := $(wildcard inc/*.h)
+OBJS := $(addprefix $(SUB_DIR)/,$(notdir $(SRCS:.$(LANG)=.o)))
+DEPS := $(addprefix $(SUB_DIR)/,$(notdir $(SRCS:.$(LANG)=.d)))
+
+all : $(TARGET)
+$(TARGET) : $(OBJS)
+	@$(CXX) $(LFLAGS) $(INC) $(OBJS) -o $@ -lm $(LIBS)
+
+$(SUB_DIR)/%.o: %.$(LANG) $(INCS)
+	@$(CXX) -c $(CFLAGS) $(INC) -MMD -MP $< -o $@ $(LIBS)
 
 
-bin/run : $(OBJ_FILE)
-	    $(CC) $(FLAGS) $(INC) $^ -o $@ $(LD_LIB)
+run: $(TARGET)
+	@$(CLEAR_SCREEN)
+	./$(TARGET)
 
-bin/rungprof : $(OBJ_FILE)
-		$(CC) $(FLAGS) -pg $(INC) $^ -o $@ $(LD_LIB)
+clean:
+	@$(CLEAR_SCREEN)
+	@-rm -rf $(SUB_DIR)
 
+cleanall:
+	@$(CLEAR_SCREEN)
+	@-rm -rf $(SUB_DIR) $(TARGET)
 
-obj/%.o : %.c config.h
-	      $(CC) $(FLAGS) -c $(INC) $< -o $@
-
-
-tags : $(SRC_FILE) $(H_FILE)
+tags : $(SRCS) $(INCS)
 	ctags -f ./.tags --c-kinds=+p --fields=+iaS --extra=+fq ./inc
 
 syntatic:
-	  echo "$(INC)" > .syntastic_c_config
-	  echo "$(FLAGS)" >> .syntastic_c_config
-	  echo "$(LD_LIB)" >> .syntastic_c_config
-	  sed -i 's/ -/\n-/g' .syntastic_c_config
+	  echo "$(INC)" > .syntastic_$(LANG)_config
+	  echo "$(CFLAGS)" >> .syntastic_$(LANG)_config
+	  echo "$(LFLAGS)" >> .syntastic_$(LANG)_config
+	  sed -i 's/ -/\n-/g' .syntastic_$(LANG)_config
 
-clean :
-	rm -rf obj/*.o bin/run bin/rungprof
 

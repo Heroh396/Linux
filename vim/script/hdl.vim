@@ -6,17 +6,17 @@ let b:loaded_hdl=1
 " VHDL  ------------------------------------------------------------------------
 function! HDL()
     setlocal comments=:--
-    "setlocal errorformat=\*\*\ %trror:\ %f(%l):\ %m
-    "setlocal errorformat+=\*\*\ %tarning:\ %f(%l):\ %m
-    "if !filereadable("Makefile")
-    "    if (&ft=='verilog')
-    "        setlocal makeprg=vlog\ %\ $*
-    "    elseif (&ft=='systemverilog')
-    "        setlocal makeprg=vlog\ -sv\ %\ $*
-    "    elseif (&ft=='vhdl')
-    "        setlocal makeprg=vcom\ %\ $*
-    "    endif
-    "endif
+    setlocal errorformat=\*\*\ %trror:\ %f(%l):\ %m
+    setlocal errorformat+=\*\*\ %tarning:\ %f(%l):\ %m
+    if !filereadable("Makefile")
+        if (&ft=='verilog')
+            setlocal makeprg=vlog\ %\ $*
+        elseif (&ft=='systemverilog')
+            setlocal makeprg=vlog\ -sv\ %\ $*
+        elseif (&ft=='vhdl')
+            setlocal makeprg=vcom\ %\ $*
+        endif
+    endif
 	set expandtab
 
 	"Dictionary
@@ -42,26 +42,3 @@ function! HDL()
 endfunction
 call HDL()
 
-"function! EasyAlignVHDL ()
-"	:call easy_align#align(<bang>0, 0, 'command', '/:/')
-"endfunction
-"	
-"
-"
-"command! -range  -bang EasyAlignVHDL <line1>,<line2>call EasyAlignVHDL()
-"command! -range -bang EasyAlignVHDL <line1>,<line2>call easy_align#align(<bang>0, 0, 
-"			\'command', 
-"			\'/\(\<-\>
-"			\\|\<std_logic\>
-"			\\|\<unsigned\>
-"			\\|\<signed\>
-"			\\|\<integer\>
-"			\\|\<logic\>
-"			\\|\<bit\>
-"			\\|\<in\>
-"			\\|\<out\>
-"			\\|\<downto\>
-"			\\|\<to\>
-"			\\|\<range\>
-"			\\|\<when\>
-"			\\|\<-\>\)/')
