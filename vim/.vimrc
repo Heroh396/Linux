@@ -27,7 +27,7 @@ map  <F3> 	 : cnext<CR>
 map  <F4> 	 : NERDTreeToggle<CR>
 map  <F5> 	 : SyntasticCheck<CR>
 map  <F6> 	 : SyntasticToggleMode<CR>
-map  <F9>    : set fdm=diff<CR>
+map  <F9>    : set fdm=indent<CR>
 nmap <F10>   : vsplit<bar>:term ++curwin<CR>c<CR>
 nnoremap <silent> <Space> :nohlsearch<cr><ESC>
 nmap <C-S-E> : %!xxd<CR>
@@ -50,7 +50,7 @@ set cursorline  " highlight current line
 set hlsearch    " highlight searched things
 set incsearch   " incremental search
 set ignorecase  " ignore case
-set fdm=indent  " hidden fuction group to a line
+set fdm=diff     " hidden fuction group to a line
 set t_Co=256    " set number of terminal colour
 set splitright
 set tabstop=4
@@ -65,9 +65,16 @@ set statusline=%t%m\ [%l/%L]\ %y\ [%F]
 set backspace=indent,eol,start
 set iskeyword+=_,$,@,%,#
 
-colorscheme github 
-set background=light
-let g:solarized_contrast = "high"
+if strftime("%H") < 12
+	colorscheme github 
+ 	set background=light
+	let g:solarized_contrast = "high"
+else
+  	set background=dark
+	colorscheme molokai
+	let g:rehash256 = 1
+	let g:molokai_original = 1
+endif
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
 
@@ -94,3 +101,6 @@ let g:SuperTabDefaultCompletionType      = '<C-n>'
 let g:UltiSnipsExpandTrigger             = "<tab>"
 let g:UltiSnipsJumpForwardTrigger        = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger       = "<S-tab>"
+let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
+let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running
+let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly

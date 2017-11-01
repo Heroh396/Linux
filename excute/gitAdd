@@ -9,6 +9,7 @@
 
 #!/bin/bash
 
+git add $1
 echo -n "Enter commit message: "
 read comment
 git commit -m $comment
