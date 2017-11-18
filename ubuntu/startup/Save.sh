@@ -22,8 +22,7 @@ sudo dpkg -i ttf-mscorefonts-installer_3.6_all.deb
 Install playonLinux:
 	+ install playonLinux
 	+ install lzop
-	+ install winbind samba libnss-winbind libpam-winbind krb5-config
-	krb5-locales krb5-user
+	+ install winbind samba libnss-winbind libpam-winbind krb5-config krb5-locales krb5-user
 	+ add office2010
 
 View image with pixel coordinates and pixel value

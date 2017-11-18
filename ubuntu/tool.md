@@ -1,17 +1,15 @@
 <!---
 /*******************************************************************************
 // Project name   :
-// File name      : !!FILE
-// Created date   : !!DATE
-// Author         : Ngoc-Sinh Nguyen
-// Last modified  : !!DATE
+// File name      : tool.md
+// Created date   : Sun 05 Nov 2017 07:14:08 AM ICT
+// Author         : Huy-Hung Ho
+// Last modified  : Sun 05 Nov 2017 07:14:08 AM ICT
 // Desc           :
 *******************************************************************************/
 -->
 # Introduction
-Zotero
-Optimization SSD in linux
-df -h
+":w !sudo tee %
 
 # Features
 
