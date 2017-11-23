@@ -6,15 +6,17 @@ let b:loaded_hdl=1
 " VHDL  ------------------------------------------------------------------------
 function! HDL()
     setlocal comments=:--
-    setlocal errorformat=\*\*\ %trror:\ %f(%l):\ %m
-    setlocal errorformat+=\*\*\ %tarning:\ %f(%l):\ %m
+	setlocal errorformat=**\ Error:\ %f(%l):\ %m
+    "setlocal errorformat=\*\*\ %trror:\ %f(%l):\ %m
+    "setlocal errorformat+=\*\*\ %tarning:\ %f(%l):\ %m
     if !filereadable("Makefile")
         if (&ft=='verilog')
             setlocal makeprg=vlog\ %\ $*
         elseif (&ft=='systemverilog')
             setlocal makeprg=vlog\ -sv\ %\ $*
         elseif (&ft=='vhdl')
-            setlocal makeprg=vcom\ %\ $*
+			setlocal makeprg=vmap\ work\ ../sim/work\;\ MODELSIM=$SIM/modelsim.ini\ vcom\ %
+            "setlocal makeprg=vcom\ %\ $*
         endif
     endif
 	set expandtab
@@ -41,4 +43,3 @@ function! HDL()
 	iabb toi to_integer
 endfunction
 call HDL()
-

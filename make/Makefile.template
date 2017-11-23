@@ -10,8 +10,8 @@ LANG	:= cpp
 CC		:= gcc
 CXX 	:= g++
 OPENCV  := `pkg-config --cflags opencv --libs`
-CFLAGS  += -Wall -g -std=c++11 $(OPENCV)
-LIBS	:= $(OPENCV)
+CFLAGS  += -Wall -g
+LIBS	:=
 INC     := -I./inc
 LFLAGS 	+= -s -lm
 TARGET 	:= hog
@@ -38,7 +38,7 @@ $(SUB_DIR)/%.o: %.$(LANG)
 	@$(CXX) -c $(CFLAGS) $(INC) -MMD -MP $< -o $@ $(LIBS)
 
 
-run:
+run: $(TARGET)
 	@$(CLEAR_SCREEN)
 	./$(TARGET)
 

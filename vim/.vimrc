@@ -1,3 +1,4 @@
+" First, install bundle: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "" --------------------------- Plugin ----------------------------------------
 set        nocompatible
 filetype   off
@@ -6,10 +7,10 @@ call       vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'altercation/vim-colors-solarized'
 	Plugin 'scrooloose/nerdtree'
+	Plugin 'https://github.com/suoto/hdlcc', {'do': 'cd ../ && pip install --user ./hdlcc'}
 	Plugin 'suoto/vim-hdl'
 	Plugin 'syntastic'
 	Plugin 'vim-scripts/Conque-GDB'
-	Plugin 'Valloric/YouCompleteMe'
 	Plugin 'junegunn/vim-easy-align'
 	Plugin 'airblade/vim-gitgutter'
 	Plugin 'scrooloose/nerdcommenter'
@@ -21,20 +22,15 @@ filetype   plugin indent on
 filetype   on
 
 
-"" -------------------- Shortcuts  ----------------------------------------------
-map  <F2> 	 : make<bar>cw<CR><CR><CR>
-map  <F3> 	 : cnext<CR>
-map  <F4> 	 : NERDTreeToggle<CR>
-map  <F5> 	 : SyntasticCheck<CR>
-map  <F6> 	 : SyntasticToggleMode<CR>
-map  <F9>    : set fdm=indent<CR>
-nmap <F10>   : vsplit<bar>:term ++curwin<CR>c<CR>
-nnoremap <silent> <Space> :nohlsearch<cr><ESC>
-nmap <C-S-E> : %!xxd<CR>
-imap <C-N>     <Plug>snipMateTrigger
-xmap ga  	   <Plug>(EasyAlign)
-nmap ga        <Plug>(EasyAlign)
-
+"" -------------------- shortcuts  ----------------------------------------------
+map  <f2> 	 : make<bar>cw<cr><cr><cr>
+map  <f3> 	 : cnext<cr>
+map  <f4> 	 : NERDTreeToggle<cr>
+map  <f5> 	 : SyntasticCheck<cr>
+map  <f6> 	 : SyntasticToggleMode<cr>
+map  <f9>    : set fdm=indent<cr>
+nmap <f10>   : vsplit<bar>:term ++curwin<cr>c<cr>
+nmap <c-s-e> : %!xxd<cr>
 
 
 "" -------------------- Common -------------------------------------------------
@@ -64,6 +60,8 @@ set laststatus=2
 set statusline=%t%m\ [%l/%L]\ %y\ [%F] 
 set backspace=indent,eol,start
 set iskeyword+=_,$,@,%,#
+set wildmenu
+set wildmode=longest:full,full
 
 if strftime("%H") < 12
 	colorscheme github 
@@ -101,6 +99,6 @@ let g:SuperTabDefaultCompletionType      = '<C-n>'
 let g:UltiSnipsExpandTrigger             = "<tab>"
 let g:UltiSnipsJumpForwardTrigger        = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger       = "<S-tab>"
-let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
-let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running
-let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly
+let g:ConqueTerm_Color = 2			   "  1: strip color after 200 lines, 2: always with color
+let g:ConqueTerm_CloseOnEnd = 1		   "  close conque when program ends running
+let g:ConqueTerm_StartMessages = 0	   "  display warning messages if conqueTerm is configured incorrectly

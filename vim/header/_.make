@@ -1,7 +1,7 @@
 ##############################################################################
 # Project name   :
-# File name      : !!FILE
-# Last modified  : !!DATE
+# File name      : Makefile
+# Last modified  : Wed 16 Aug 2017 01:06:42 AM ICT
 # Guide          :
 ###############################################################################
 .PHONY: all run clean cleanall tags syntatic
@@ -10,8 +10,8 @@ LANG	:= cpp
 CC		:= gcc
 CXX 	:= g++
 OPENCV  := `pkg-config --cflags opencv --libs`
-CFLAGS  += -Wall -g -std=c++11 $(OPENCV)
-LIBS	:= $(OPENCV)
+CFLAGS  += -Wall -g
+LIBS	:=
 INC     := -I./inc
 LFLAGS 	+= -s -lm
 TARGET 	:= hog
@@ -34,7 +34,7 @@ all : $(TARGET)
 $(TARGET) : $(OBJS)
 	@$(CXX) $(LFLAGS) $(INC) $(OBJS) -o $@ -lm $(LIBS)
 
-$(SUB_DIR)/%.o: %.$(LANG) $(INCS)
+$(SUB_DIR)/%.o: %.$(LANG)
 	@$(CXX) -c $(CFLAGS) $(INC) -MMD -MP $< -o $@ $(LIBS)
 
 
@@ -58,5 +58,3 @@ syntatic:
 	  echo "$(CFLAGS)" >> .syntastic_$(LANG)_config
 	  echo "$(LFLAGS)" >> .syntastic_$(LANG)_config
 	  sed -i 's/ -/\n-/g' .syntastic_$(LANG)_config
-
-
