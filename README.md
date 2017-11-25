@@ -34,8 +34,12 @@ INSTALL VIM
 ===========
 
 git clone http://github.com/yoloh3/Linux
+
 cd Linux
+
 chmod u+x install_vim.sh
+
 ./install_vim.sh
+
 vim ~/.vimrc
-	:PluginInstall
+-  	:PluginInstall
