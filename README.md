@@ -10,10 +10,12 @@
 -->
 Introduction
 ============
+
 This repository stores the cofigurations when working.
 
 Features
 ========
+
 The configuration of:
 
 * ubuntu
@@ -27,3 +29,13 @@ The configuration of:
 * modelsim
 
 * make
+
+INSTALL VIM
+===========
+
+git clone http://github.com/yoloh3/Linux
+cd Linux
+chmod u+x install_vim.sh
+./install_vim.sh
+vim ~/.vimrc
+	:PluginInstall
