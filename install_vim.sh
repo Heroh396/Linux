@@ -9,7 +9,7 @@
 #!/bin/bash
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
-cp ~/.vim ~/.vim.backup
+mv ~/.vim ~/.vim.backup
 cp ~/.bashrc ~/.bashrc.backup
 mkdir -p ~/.vim
 cp -R ./vim/* ~/.vim
