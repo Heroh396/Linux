@@ -8,10 +8,14 @@
 # -----------------------------------------------------------------------------
 #!/bin/bash
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
 mv ~/.vim ~/.vim.backup
-cp ~/.bashrc ~/.bashrc.backup
 mkdir -p ~/.vim
 cp -R ./vim/* ~/.vim
-cp ./vim/.vimrc ~/.vimrc
+
+mv ~/.vimrc ~/.vimrc.backup
+mv ./vim/.vimrc ~/.vimrc
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+
+cp ~/.bashrc ~/.bashrc.backup
 vim +slient +PlugInstall +qall
