@@ -7,7 +7,7 @@ call       vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'altercation/vim-colors-solarized'
 	Plugin 'scrooloose/nerdtree'
-	Plugin 'https://github.com/suoto/hdlcc', {'do': 'cd ../ && pip install --user ./hdlcc'}
+"	Plugin 'https://github.com/suoto/hdlcc', {'do': 'cd ../ && pip install --user ./hdlcc'}
 	Plugin 'suoto/vim-hdl'
 	Plugin 'syntastic'
 	Plugin 'vim-scripts/Conque-GDB'
