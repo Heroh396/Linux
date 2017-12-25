@@ -12,10 +12,11 @@ mv ~/.vim ~/.vim.backup
 mkdir -p ~/.vim
 cp -R ./vim/* ~/.vim
 
+mv ~/.bashrc ~/.bashrc.backup
 mv ~/.vimrc ~/.vimrc.backup
-mv ./vim/.vimrc ~/.vimrc
+cp -R ./bash/.bashrc ~/.bashrc
+cp -R ./vim/.vimrc ~/.vimrc
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
 
-cp ~/.bashrc ~/.bashrc.backup
 vim +slient +PlugInstall +qall

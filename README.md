@@ -18,17 +18,12 @@ Features
 
 The configuration of:
 
-* ubuntu
-
-* bash
-
-* vim
-
-* git
-
-* modelsim
-
-* make
+-   ubuntu
+-   bash
+-   vim
+-   git
+-   modelsim
+-   make
 
 INSTALL VIM
 ===========
@@ -37,9 +32,9 @@ git clone http://github.com/yoloh3/Linux
 
 cd Linux
 
-chmod u+x install_vim.sh
+chmod u+x install.sh
 
-./install_vim.sh
+./install.sh
 
 vim ~/.vimrc
 -  	:PluginInstall

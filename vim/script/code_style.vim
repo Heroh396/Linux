@@ -96,12 +96,15 @@ command Light call Light()
 autocmd bufnewfile *.{c,h}  	0r ~/.vim/header/_.c
 autocmd bufnewfile *.{cpp,c++}  0r ~/.vim/header/_.cpp
 autocmd bufnewfile *.{sv,v}  	0r ~/.vim/header/_.systemverilog
-autocmd bufnewfile *.{md}  		0r ~/.vim/header/_.markdown
+autocmd bufnewfile *.{md}  		0r ~/.vim/header/_.md
 autocmd bufnewfile *.{vhd,vhdl} 0r ~/.vim/header/_.vhd
 autocmd bufnewfile *.sh  		0r ~/.vim/header/_.sh
 autocmd bufnewfile *.py  		0r ~/.vim/header/_.py
 autocmd bufnewfile *.tex  		0r ~/.vim/header/_.tex
+autocmd bufnewfile *.txt  		0r ~/.vim/header/_.txt
 autocmd bufnewfile Makefile  	0r ~/.vim/header/_.make
 
-autocmd bufnewfile * call UpdateDF()
+au bufnewfile *.py !chmod +x %
+au bufnewfile * call UpdateDF()
 au bufnewfile {cpp,c,make,sh,vhdl,verilog,systemverilog,tex} call CheckStyle()
+au bufNewFile * $

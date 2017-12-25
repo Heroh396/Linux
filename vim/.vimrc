@@ -28,9 +28,12 @@ map  <f3> 	 : cnext<cr>
 map  <f4> 	 : NERDTreeToggle<cr>
 map  <f5> 	 : SyntasticCheck<cr>
 map  <f6> 	 : SyntasticToggleMode<cr>
-map  <f9>    : set fdm=indent<cr>
-nmap <f10>   : vsplit<bar>:term ++curwin<cr>c<cr>
-nmap <c-s-e> : %!xxd<cr>
+nmap <f9>    : vsplit<bar>:term ++curwin<cr>c<cr>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+xmap ga <Plug>(EasyAlign)
 
 
 "" -------------------- Common -------------------------------------------------
@@ -64,15 +67,21 @@ set wildmenu
 set wildmode=longest:full,full
 
 if strftime("%H") < 12
-	colorscheme github 
- 	set background=light
+ 	set background=dark
+	colorscheme apprentice
 	let g:solarized_contrast = "high"
 else
   	set background=dark
-	colorscheme molokai
-	let g:rehash256 = 1
-	let g:molokai_original = 1
+	colorscheme hydrangea
+"	let g:rehash256 = 1
+"	let g:molokai_original = 1
 endif
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
+" autocmd VimEnter * NERDTree | wincmd p
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
 

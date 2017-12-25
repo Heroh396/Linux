@@ -1,0 +1,28 @@
+<!---
+vim: ft=markdown
+/*******************************************************************************
+// Project name   :
+// File name      : Note.md
+// Created date   : kax 11 2017
+// Author         : Huy-Hung Ho
+// Last modified  : kax 11 2017 10:05
+// Desc           :
+*******************************************************************************/
+-->
+# INTRO
+
+# FEATURE
+
+# Error: 
+
+Edit wine to 2.10
+
+# Remove *.lnk files
+
+mkdir ~/PlayOnLinux's virtual drives/Office2010/drive_c/users/<username>/Recent
+
+# Auto-open office files
+
+cp ~/Desktop/Microsoft\ \*.desktop ~/.local/share/applications/
+// Open Propeties of office files and edit Application
+

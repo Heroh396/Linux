@@ -1,12 +1,14 @@
 # -----------------------------------------------------------------------------
 # Project name   :
-# File name      : findPaper
-# Created date   : Sat 21 Oct 2017 10:55:49 PM ICT
+# File name      : convert_unix_coding.sh
+# Created date   : Dec 14 2017
 # Author         : Huy-Hung Ho
-# Last modified  : Sat 21 Oct 2017 10:55:49 PM ICT
+# Last modified  : Dec 14 2017 10:10
 # Guide          :
 # -----------------------------------------------------------------------------
 #!/bin/bash
 
-CLIPBOARD="$(xclip -selection c -o)"
-find /home/Working/Project/ann/doc/paper/ -name "*$CLIPBOARD*"
+for file in $(ls *vhd)
+do 
+  vi +':w ++ff=unix' +':q' ${file}
+done

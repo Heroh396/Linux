@@ -1,15 +1,12 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
+# for examples 
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
+# don't put duplicate lines or lines starting with space in the history.  # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
@@ -43,7 +40,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -112,25 +109,30 @@ if ! shopt -oq posix; then
 fi
 
 ## Some alias for me
-alias search='apt-cache search '
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get upgrade '
-alias install='sudo apt-get install '
-alias remove='sudo apt-get remove '
+alias search='yum search '
+alias update='sudo yum update'
+alias upgrade='sudo yum upgrade '
+alias install='sudo yum install '
+alias remove='sudo yum remove '
 
-alias open='nautilus .'
+alias open='caja .'
 alias xxx='sudo shutdown -h now'
 alias c='clear; ls;'
+alias rm='rm -i'
 alias cb='xclip -selection clipboard '
 alias unrar='unrar x -r'
 alias music='rhythmbox-client --play'
 alias snip='cd ~/.vim/bundle/vim-snippets/snippets'
+#[[ $TERM != "screen" ]] && exec tmux
 
 alias powerpoint="playonlinux --run 'Microsoft Powerpoint 2010' &"
 alias excel="playonlinux --run 'Microsoft Excel 2010' &"
 alias word="playonlinux --run 'Microsoft Word 2010' &"
 alias unikeynt="playonlinux --run 'UniKeyNT' &"
-alias rm='rm -i'
-# [[ $TERM != "screen" ]] && exec tmux
+alias matlab="bash /home/apps/matlab/bin/matlab &"
+alias ser_28="ssh -Y hunghh_59d@10.10.128.28"
+alias ser_33="ssh -Y hunghh_59d@10.10.128.33"
+alias ser_42="ssh -Y hunghh_59d@10.10.128.42"
 
-export LS_COLORS='no=00:fi=00:di=01;35:ln=01;35:ow=37;44:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;35:*.cmd=00;32:*.exe=00;32:*.sh=00;32:*.gz=00;31:*.bz2=00;31:*.bz=00;31:*.tz=00;31:*.rpm=00;31:*.cpio=00;31:*.t=93:*.pm=00;36:*.pod=00;96:*.conf=00;33:*.off=00;9:*.jpg=00;94:*.png=00;94:*.xcf=00;94:*.JPG=00;94:*.gif=00;94:*.pdf=00;91'
+export TERM=xterm-256color
+ls
