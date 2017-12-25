@@ -8,7 +8,7 @@
 # -----------------------------------------------------------------------------
 #!/bin/bash
 
+cp -R ~/.git* ./git/
 cp -R ~/.bashrc ./bash/.bashrc
 cp -R ~/.vimrc ./vim/.vimrc
-
 cp -R ~/.vim/* ./vim/
