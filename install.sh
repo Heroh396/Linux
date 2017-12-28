@@ -8,7 +8,7 @@
 # -----------------------------------------------------------------------------
 #!/bin/bash
 
-cp -R ./git/.gitconfig ~
+cp -R ./git/.git* ~
 
 mv ~/.vim ~/.vim.backup
 mkdir -p ~/.vim
