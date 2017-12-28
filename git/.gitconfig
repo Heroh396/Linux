@@ -1,0 +1,24 @@
+[user]
+	email = heroh396@gmail.com
+	name = yoloh3
+[commit]
+	template = ~/.gitmessage
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+	lo = log --graph --all --oneline --decorate
+[color "status"]
+  added = green
+  changed = red bold
+  untracked = magenta bold
+[color "branch"]
+  remote = yellow
+[core]
+	pager = less -R
+[color]
+	ui = true
+[push]
+	default = matching
