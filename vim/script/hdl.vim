@@ -15,7 +15,7 @@ function! HDL()
         elseif (&ft=='systemverilog')
             setlocal makeprg=vlog\ -sv\ %\ $*
         elseif (&ft=='vhdl')
-			setlocal makeprg=vmap\ work\ ../sim/work\;\ vcom\ %
+			setlocal makeprg=vmap\ work\ ../sim/work\;\ vcom\ -2008\ %
 			"setlocal makeprg=vmap\ work\ ../sim/work\;\ MODELSIM=$SIM/modelsim.ini\ vcom\ %
             "setlocal makeprg=vcom\ %\ $*
         endif

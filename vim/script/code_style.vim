@@ -93,6 +93,8 @@ command BeforePublic call BeforePublic()
 command Dark call Dark()
 command Light call Light()
 
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufnewfile *.{c,h}  	0r ~/.vim/header/_.c
 autocmd bufnewfile *.{cpp,c++}  0r ~/.vim/header/_.cpp
 autocmd bufnewfile *.{sv,v}  	0r ~/.vim/header/_.systemverilog

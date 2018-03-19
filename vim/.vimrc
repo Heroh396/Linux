@@ -7,16 +7,11 @@ call       vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'altercation/vim-colors-solarized'
 	Plugin 'scrooloose/nerdtree'
-"	Plugin 'https://github.com/suoto/hdlcc', {'do': 'cd ../ && pip install --user ./hdlcc'}
-	Plugin 'suoto/vim-hdl'
-	Plugin 'syntastic'
-	Plugin 'vim-scripts/Conque-GDB'
 	Plugin 'junegunn/vim-easy-align'
+	Plugin 'ervandew/supertab'
+	Plugin 'syntastic'
 	Plugin 'airblade/vim-gitgutter'
 	Plugin 'scrooloose/nerdcommenter'
-	Plugin 'ervandew/supertab'
-	Plugin 'SirVer/ultisnips'
-	Plugin 'honza/vim-snippets'
 call       vundle#end()
 filetype   plugin indent on
 filetype   on
@@ -35,7 +30,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 xmap ga <Plug>(EasyAlign)
 
-
 "" -------------------- Common -------------------------------------------------
 syntax on 	  	" turn on syntax
 set number      " add number column
@@ -52,11 +46,11 @@ set ignorecase  " ignore case
 set fdm=diff     " hidden fuction group to a line
 set t_Co=256    " set number of terminal colour
 set splitright
-set tabstop=4
+set tabstop=2
 set tags=tags;/
 set encoding=utf-8
 set cmdheight=2
-set shiftwidth=4
+set shiftwidth=2
 set textwidth=80
 set updatetime=250
 set laststatus=2
@@ -101,7 +95,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list            = 1
 let g:syntastic_check_on_open            = 1
 let g:syntastic_check_on_wq              = 0
-let g:syntastic_vhdl_checkers            = ['vimhdl']
 let g:ycm_key_list_select_completion     = ['<C-n>', '<C-j>']
 let g:ycm_key_list_previous_completion   = ['<C-p>', '<C-k>']
 let g:SuperTabDefaultCompletionType      = '<C-n>'

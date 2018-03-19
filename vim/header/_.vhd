@@ -1,6 +1,5 @@
 ---------------------------------------------------------------------------------
 --
--- Copyright (c) 2017 by SISLAB Team, LSI Design Contest 2018.
 -- The University of Engineering and Technology, Vietnam National University.
 -- All right resevered.
 --
@@ -28,10 +27,10 @@ use ieee.std_logic_1164.all;
 -- Entity declaration
 --------------------------------------------------------------------------------- 
 entity !!MODULE is
-    port(
-        clk     : in std_logic;
-        rst     : in std_logic;
-    );
+  port (
+    clk     : in std_logic;
+    reset_n : in std_logic;
+  );
 end entity; 
 
 ---------------------------------------------------------------------------------
